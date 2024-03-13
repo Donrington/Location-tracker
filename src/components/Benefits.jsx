@@ -1,6 +1,19 @@
-import { benefits } from "../assets/data";
+import React, { useEffect } from 'react';
+import { animateValue } from '../assets/scripts/benefit.js';
+import { benefits } from '../assets/data.js';
+
 
 const Benefits = () => {
+  useEffect(() => {
+      benefits.forEach(benefit => {
+        // Remove the '%' and convert to a number before passing to animateValue
+        animateValue(benefit.id, 0, parseInt(benefit.percentage, 10), 2000);
+
+      });
+  }, [benefits]);
+
+  if (!benefits) return <div>Loading...</div>;
+  
   return (
     <section className="benefits-section" id="benefit">
       <div className="container">
@@ -8,10 +21,11 @@ const Benefits = () => {
           Benefits of GPS Fleet Tracking
         </h2>
         <div className="row">
-          {benefits.map((benefit, index) => (
+          {benefits && benefits.map((benefit, index) => (
             <div className="col-md-3 text-center" key={index}>
               <div className="benefit">
                 <div className="percentage" id={benefit.id}>
+                  {/* Initial rendering, might be replaced by animation */}
                   {benefit.percentage}
                 </div>
                 <p className="benefit-description">{benefit.description}</p>
