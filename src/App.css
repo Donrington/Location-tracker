@@ -589,33 +589,31 @@ h1 {
 
 /*section for partners*/
 
-.partner-logos {
-  overflow: hidden;
-  padding-top: 30px;
+
+.partner-logos .partners-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px; /* This will create space between the logos */
 }
 
-.partner-logos .swiper-container {
-  width: 30%;
-  padding-top: 70px;
-}
-
-.partner-logos .swiper-slide {
-  /* Corrected class name from swiper-slider to swiper-slide */
-  text-align: center;
-  font-size: 18px;
-  background: #fff;
+.partner-logos .partner-item {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid #0000003e; /* 1px border as per design */
+  border: 1px solid #33333363; /* Adjust the border color as necessary */
+  width: 150px; /* Fixed width for all logos */
+  height: 100px; /* Fixed height for all logos */
+  overflow: hidden; /* Ensures nothing spills out of the border */
+  padding: 20px; /* Adjust padding as necessary */
 }
 
-.partner-logos .swiper-slide img {
-  display: block;
-  width: 150px; /* Adjusted for consistent width */
-  height: 75px; /* Adjusted for consistent height */
-  object-fit: contain;
-  margin: 10px; /* Added margin inside the border */
+.partner-logos img {
+  max-width: 100%;
+  max-height: 100%; /* Ensure the image doesn't exceed the container's size */
+  display: block; /* To remove any extra space beneath the image */
+  object-fit: contain; /* Ensures the logo fits within the dimensions without stretching */
 }
 
 /*section for the contact us and footer*/
