@@ -11,6 +11,8 @@ import Partners from "./components/Partners";
 import Products from "./components/Products";
 import Testimonials from "./components/Testimonials";
 
+import { benefits, testimonials, partners } from '../src/assets/data';
+
 const App = () => {
   return (
     <>
@@ -19,10 +21,10 @@ const App = () => {
       <About />
       <Features />
       <Products />
-      <Benefits />
+      <Benefits benefits={benefits} />
       <Download />
-      <Testimonials />
-      <Partners />
+      <Testimonials testimonials={testimonials} />
+      <Partners partners={partners} />
       <Contact />
       <Footer />
     </>
