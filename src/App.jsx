@@ -17,6 +17,8 @@ import { benefits, testimonials, partners } from "../src/assets/data";
 import Login from "./components/Login";
 import Register from "./components/Register";
 import Dashboard from "./components/Dashboard";
+import LocationHistory from "./components/LocationHistory";
+import UserProfile from "./components/UserProfile";
 
 const App = () => {
   return (
@@ -42,6 +44,8 @@ const App = () => {
       <Route path="/login" element={<Login />} />
       <Route path="/register" element={<Register />} />
       <Route path="/dashboard" element={<Dashboard />} />
+      <Route path="/location-history" element={<LocationHistory />} />
+      <Route path="/user-profile" element={<UserProfile />} />
     </Routes>
   );
 };

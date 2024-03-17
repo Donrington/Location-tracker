@@ -4,7 +4,7 @@ const DashboardNav = () => {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <div className="container-fluid">
-        <a className="navbar-brand" href="index.html">
+        <a className="navbar-brand" href="/">
           GPS Tracker
         </a>
         <button
@@ -24,18 +24,18 @@ const DashboardNav = () => {
               <a
                 className="nav-link active"
                 aria-current="page"
-                href="dashboard.html"
+                href="/dashboard"
               >
                 Dashboard
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="locationhistory.html">
+              <a className="nav-link" href="/location-history">
                 Location History
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="userprofile.html">
+              <a className="nav-link" href="/user-profile">
                 User Profile
               </a>
             </li>

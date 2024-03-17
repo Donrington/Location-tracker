@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { animateValue } from "../assets/scripts/benefit.js";
+// import { animateValue } from "../assets/scripts/benefit.js";
 import { benefits } from "../assets/data.js";
 
 const Benefits = () => {
