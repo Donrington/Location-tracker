@@ -1,3 +1,5 @@
+import { Route, Routes } from "react-router";
+
 import "./App.css";
 import About from "./components/About";
 import Benefits from "./components/Benefits";
@@ -11,23 +13,40 @@ import Partners from "./components/Partners";
 import Products from "./components/Products";
 import Testimonials from "./components/Testimonials";
 
-import { benefits, testimonials, partners } from '../src/assets/data';
+import { benefits, testimonials, partners } from "../src/assets/data";
+import Login from "./components/Login";
+import Register from "./components/Register";
+import Dashboard from "./components/Dashboard";
+import LocationHistory from "./components/LocationHistory";
+import UserProfile from "./components/UserProfile";
 
 const App = () => {
   return (
-    <>
-      <Navbar />
-      <Hero />
-      <About />
-      <Features />
-      <Products />
-      <Benefits benefits={benefits} />
-      <Download />
-      <Testimonials testimonials={testimonials} />
-      <Partners partners={partners} />
-      <Contact />
-      <Footer />
-    </>
+    <Routes>
+      <Route
+        path="/"
+        element={
+          <>
+            <Navbar />
+            <Hero />
+            <About />
+            <Features />
+            <Products />
+            <Benefits benefits={benefits} />
+            <Download />
+            <Testimonials testimonials={testimonials} />
+            <Partners partners={partners} />
+            <Contact />
+            <Footer />
+          </>
+        }
+      />
+      <Route path="/login" element={<Login />} />
+      <Route path="/register" element={<Register />} />
+      <Route path="/dashboard" element={<Dashboard />} />
+      <Route path="/location-history" element={<LocationHistory />} />
+      <Route path="/user-profile" element={<UserProfile />} />
+    </Routes>
   );
 };
 

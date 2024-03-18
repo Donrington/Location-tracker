@@ -1,19 +1,17 @@
-import React, { useEffect, useRef } from 'react';
-import { register } from 'swiper/element/bundle';
-import 'swiper/css'; // Ensure you import Swiper styles
+import React, { useEffect, useRef } from "react";
+import { register } from "swiper/element/bundle";
+import "swiper/css";
 import { testimonials } from "../assets/data";
 
 const Testimonials = () => {
   const swiperRef = useRef(null);
 
   useEffect(() => {
-    // Register Swiper web component
     register();
 
-    // Object with parameters for your testimonials slider
     const params = {
-      slidesPerView: 1, // Default view
-      spaceBetween: 30, // Space between slides
+      slidesPerView: 1,
+      spaceBetween: 30,
       autoplay: {
         delay: 2500,
         disableOnInteraction: false,
@@ -21,21 +19,18 @@ const Testimonials = () => {
       pagination: {
         clickable: true,
       },
-      // Example of adding breakpoints for responsive design
       breakpoints: {
         640: {
-          slidesPerView: 2, // Show 2 slides per view when the viewport is 640 pixels or larger
+          slidesPerView: 2,
         },
         768: {
-          slidesPerView: 3, // Show 3 slides per view when the viewport is 768 pixels or larger
+          slidesPerView: 3,
         },
       },
     };
 
-    // Assign parameters to swiper element
     Object.assign(swiperRef.current, params);
 
-    // Initialize swiper
     swiperRef.current.initialize();
   }, []);
 
@@ -51,7 +46,11 @@ const Testimonials = () => {
             and efficiency of our GPS tracking solutions firsthand.
           </p>
         </div>
-        <swiper-container className="swiper mySwiper" init="false" ref={swiperRef}>
+        <swiper-container
+          className="swiper mySwiper"
+          init="false"
+          ref={swiperRef}
+        >
           <div className="swiper-wrapper">
             {testimonials.map((testimonial, index) => (
               <swiper-slide className="swiper-slide" key={index}>

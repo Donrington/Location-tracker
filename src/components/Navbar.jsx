@@ -46,11 +46,11 @@ const Navbar = () => {
               Contact
             </a>
 
-            <a className="nav-link login-link" href="#login">
+            <a className="nav-link login-link" href="/login">
               Login
             </a>
-            <a className="nav-link signup-link" href="#signup">
-              Signup
+            <a className="nav-link signup-link" href="/register">
+              Register
             </a>
           </div>
         </div>
